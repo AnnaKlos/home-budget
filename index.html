@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <title>Kalkulator wydatków</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="header-logo">
+        <img
+          class="header-logo-img"
+          src="images/wallet.png"
+          alt="wallet logo"
+        />
+      </h1>
+    </header>
+    <main>
+      <section class="summary">
+        <div class="summary-text">
+          <h2 id="summary-info">Bilans wynosi 0</h2>
+        </div>
+      </section>
+      <div class="calculate">
+        <section class="calculate-income">
+          <div>
+            <div class="calculate-income-head calculate-head">
+              <h4 class="">Przychody</h4>
+              <input
+                type="text"
+                placeholder="Nazwa przychodu"
+                id="income-text-input"
+              />
+              <input
+                type="number"
+                placeholder="kwota"
+                id="income-number-input"
+              />
+              <button id="income-add-button">Dodaj</button>
+            </div>
+            <div class="calculate-income-content">
+              <div class="calculate-income-list calculate-list">
+                <ul id="income-list"></ul>
+              </div>
+              <div class="calculate-income-sum calculate-sum">
+                <p>Suma przychodów <span id="income-sum">0</span> PLN</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="calculate-expenses">
+          <div>
+            <div class="calculate-expenses-head calculate-head">
+              <h4 class="">Wydatki</h4>
+              <input
+                type="text"
+                placeholder="Nazwa wydatku"
+                id="expense-text-input"
+              />
+              <input
+                type="number"
+                placeholder="kwota"
+                id="expense-number-input"
+              />
+              <button id="expense-add-button">Dodaj</button>
+            </div>
+            <div class="calculate-expenses-content">
+              <div class="calculate-expenses-list calculate-list">
+                <ul id="expense-list"></ul>
+              </div>
+              <div class="calculate-expenses-sum calculate-sum">
+                <p>Suma wydatków <span id="expense-sum">0</span> PLN</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="scripts/functions.js"></script>
+    <script src="scripts/summary_info.js"></script>
+    <script src="scripts/incomes_input.js"></script>
+    <script src="scripts/expenses_input.js"></script>
+  </body>
+</html>
